@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoa Ngữ Xiaoyu - Luyện tập Từ vựng & Ngữ pháp Bài 5</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        h1 {
+            color: #0b8457;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        .section {
+            margin-bottom: 35px;
+            border-bottom: 2px dashed #e0e0e0;
+            padding-bottom: 25px;
+        }
+        .section-title {
+            background: #0b8457;
+            color: #fff;
+            padding: 8px 15px;
+            border-radius: 6px;
+            font-size: 1.2em;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        .question-block {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 4px solid #0b8457;
+            background: #fafafa;
+            border-radius: 0 8px 8px 0;
+        }
+        .question-text {
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .options-route {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+        .option-btn {
+            background: #fff;
+            border: 1px solid #ccc;
+            padding: 10px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            text-align: left;
+            transition: all 0.2s;
+            font-size: 0.95em;
+        }
+        .option-btn:hover {
+            background: #eef7f4;
+            border-color: #0b8457;
+        }
+        .correct {
+            background: #d4edda !important;
+            border-color: #28a745 !important;
+            color: #155724;
+            font-weight: bold;
+        }
+        .incorrect {
+            background: #f8d7da !important;
+            border-color: #dc3545 !important;
+            color: #721c24;
+        }
+        .explanation {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #555;
+            display: none;
+            background: #eef7f4;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>华语小雨 - HOA NGỮ XIAOYU</h1>
+    <div class="subtitle">Hệ thống luyện tập tương tác trực tuyến - Bài 5: Từ vựng & Ngữ pháp</div>
+
+    <!-- PHẦN 1: LUYỆN TẬP TỪ VỰNG -->
+    <div class="section">
+        <div class="section-title">Mục 1: Luyện tập Từ vựng (生词 Luyện tập)</div>
+        
+        <div class="question-block" id="v1">
+            <div class="question-text">Câu 1: Đâu là chữ Hán chuẩn xác của từ "bàba" (bố, ba)?</div>
+            <div class="options-route">
+                <button class="option-btn" onclick="checkAnswer('v1', false, this)">A. 妈妈</button>
+                <button class="option-btn" onclick="checkAnswer('v1', true, this)">B. 爸爸</button>
+                <button class="option-btn" onclick="checkAnswer('v1', false, this)">C. 哥哥</button>
+            </div>
+            <div class="explanation">Đúng! 爸爸 là Bố, chữ gồm bộ Phụ (父) ở trên biểu thị người cha. Chữ thứ hai đọc thanh nhẹ (khinh thanh).</div>
+        </div>
+
+        <div class="question-block" id="v2">
+            <div class="question-text">Câu 2: Từ vựng "女儿" (nǚ'ér) mang ý nghĩa là gì?</div>
+            <div class="options-route">
+                <button class="option-btn" onclick="checkAnswer('v2', false, this)">A. Con trai</button>
+                <button class="option-btn" onclick="checkAnswer('v2', true, this)">B. Con gái</button>
+                <button class="option-btn" onclick="checkAnswer('v2', false, this)">C. Người nhà</button>
+            </div>
+            <div class="explanation">Chính xác! 女儿 là con gái, còn 儿子 mới là con trai.</div>
+        </div>
+
+        <div class="question-block" id="v3">
+            <div class="question-text">Câu 3: Số đếm "69" được viết bằng chữ Hán như thế nào?</div>
+            <div class="options-route">
+                <button class="option-btn" onclick="checkAnswer('v3', false, this)">A. 六九</button>
+                <button class="option-btn" onclick="checkAnswer('v3', true, this)">B. 六十九</button>
+                <button class="option-btn" onclick="checkAnswer('v3', false, this)">C. 九十六</button>
+            </div>
+            <div class="explanation">Tuyệt vời! Sáu mươi chín ghép tuần tự theo tư duy: 六 (6) + 十 (10) + 九 (9) = 六十九.</div>
+        </div>
+
+        <div class="question-block" id="v4">
+            <div class="question-text">Câu 4: Chữ Hán nào mang ý nghĩa là "nhà, gia đình"?</div>
+            <div class="options-route">
+                <button class="option-btn" onclick="checkAnswer('v4', true, this)">A. 家</button>
+                <button class="option-btn" onclick="checkAnswer('v4', false, this)">B. 口</button>
+                <button class="option-btn" onclick="checkAnswer('v4', false, this)">C. 岁</button>
+            </div>
+            <div class="explanation">Đúng rồi! Chữ 家 (jiā) gồm bộ Miên (宀 - mái nhà) ở trên và bộ Thỉ (豕 - con lợn) ở dưới.</div>
+        </div>
+    </div>
+
+    <!-- PHẦN 2: LUYỆN TẬP NGỮ PHÁP -->
+    <div class="section">
+        <div class="section-title">Mục 2: Luyện tập Ngữ pháp (语法 Luyện tập)</div>
+
+        <div class="question-block" id="g1">
+            <div class="question-text">Câu 5: Chọn từ phủ định chính xác cho động từ "有": "我____中国朋友。" (Tôi không có bạn Trung Quốc).</div>
+            <div class="options-route">
+                <button class="option-btn" onclick="checkAnswer('g1', false, this)">A. 不有 (bù yǒu)</button>
+                <button class="option-btn" onclick="checkAnswer('g1', true, this)">B. 没有 (méi yǒu)</button>
+                <button class="option-btn" onclick="checkAnswer('g1', false, this)">C. 不 (bù)</button>
+            </div>
+            <div class="explanation">Đúng rồi! Động từ "有" có dạng phủ định duy nhất là "没有", tuyệt đối không dùng "不有".</div>
+        </div>
+
+        <div class="question-block" id="g2">
+            <div class="question-text">Câu 6: Vị trí đặt trạng ngữ thời gian "今年" (năm nay) trong câu nào sau đây là SAI?</div>
+            <div class="options-route">
+                <button class="option-btn" onclick="checkAnswer('g2', false, this)">A. 今年我六十八岁了。</button>
+                <button class="option-btn" onclick="checkAnswer('g2', false, this)">B. 我今年六十八岁了。</button>
+                <button class="option-btn" onclick="checkAnswer('g2', true, this)">C. 我六十八岁 modifiers 今年了。</button>
+            </div>
+            <div class="explanation">Chính xác! Trong tiếng Trung, từ chỉ thời gian đứng trước hoặc sau chủ ngữ, không bao giờ đứng cuối câu.</div>
+        </div>
+
+        <div class="question-block" id="g3">
+            <div class="question-text">Câu 7: Trợ từ ngữ khí "了" đặt ở cuối câu "李老师今年50岁了。" biểu thị ý nghĩa gì?</div>
+            <div class="options-route">
+                <button class="option-btn" onclick="checkAnswer('g3', false, this)">A. Biểu thị hành động trong quá khứ</button>
+                <button class="option-btn" onclick="checkAnswer('g3', true, this)">B. Biểu thị sự thay đổi hoặc trạng thái mới xuất hiện</button>
+                <button class="option-btn" onclick="checkAnswer('g3', false, this)">C. Biểu thị sự nhấn mạnh phủ định</button>
+            </div>
+            <div class="explanation">Tuyệt vời! Chữ "了" ở cuối câu hỏi/nói về tuổi tác biểu thị trạng thái mới (đã tăng thêm một tuổi mới).</div>
+        </div>
+    </div>
+
+    <!-- PHẦN 3: PHÂN BIỆT TỔNG HỢP (TỪ VỰNG & NGỮ PHÁP) -->
+    <div class="section">
+        <div class="section-title">Mục 3: Phân biệt & Ứng dụng bối cảnh tổng hợp</div>
+
+        <div class="question-block" id="c1">
+            <div class="question-text">Câu 8: Khi muốn đếm tổng số thành viên trong gia đình, ta dùng lượng từ nào?</div>
+            <div class="options-route">
+                <button class="option-btn" onclick="checkAnswer('c1', false, this)">A. 个 (gè)</button>
+                <button class="option-btn" onclick="checkAnswer('c1', true, this)">B. 口 (kǒu)</button>
+                <button class="option-btn" onclick="checkAnswer('c1', false, this)">C. 岁 (suì)</button>
+            </div>
+            <div class="explanation">Chính xác! Lượng từ "口" (nghĩa gốc là cái miệng) chuyên dùng để đếm nhân khẩu, số người sống trong gia đình.</div>
+        </div>
+
+        <div class="question-block" id="c2">
+            <div class="question-text">Câu 9: Điền lượng từ chính xác vào câu sau: "李老师有两个____女儿。" (Thầy Lý có 2 người con gái).</div>
+            <div class="options-route">
+                <button class="option-btn" onclick="checkAnswer('c2', true, this)">A. 个 (gè)</button>
+                <button class="option-btn" onclick="checkAnswer('c2', false, this)">B. 口 (kǒu)</button>
+            </div>
+            <div class="explanation">Đúng! Khi đếm số lượng con cái hoặc đối tượng cụ thể riêng lẻ, ta dùng lượng từ phổ thông "个" chứ không dùng "口".</div>
+        </div>
+
+        <div class="question-block" id="c3">
+            <div class="question-text">Câu 10: Khi gặp một bạn mới quen ở lớp học (bằng tuổi mình), em dùng câu nào để hỏi tuổi bạn?</div>
+            <div class="options-route">
+                <button class="option-btn" onclick="checkAnswer('c3', false, this)">A. 你几岁了？ (Nǐ jǐ suì le?)</button>
+                <button class="option-btn" onclick="checkAnswer('c3', true, this)">B. 你多大了？ (Nǐ duō dà le?)</button>
+                <button class="option-btn" onclick="checkAnswer('c3', false, this)">C. 您多大年纪了？ (Nín duō dà niánjì le?)</button>
+            </div>
+            <div class="explanation">Chuẩn rồi! Người trẻ tuổi hoặc bạn bè bằng vai phải lứa dùng "多大了". "几岁了" chỉ dùng cho trẻ em dưới 10 tuổi.</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function checkAnswer(questionId, isCorrect, clickedButton) {
+        const questionBlock = document.getElementById(questionId);
+        const buttons = questionBlock.querySelectorAll('.option-btn');
+        
+        buttons.forEach(btn => {
+            btn.disabled = true;
+            btn.style.cursor = 'default';
+        });
+
+        if (isCorrect) {
+            clickedButton.classList.add('correct');
+        } else {
+            clickedButton.classList.add('incorrect');
+            buttons.forEach(btn => {
+                if (btn.getAttribute('onclick').includes('true')) {
+                    btn.classList.add('correct');
+                }
+            });
+        }
+
+        const explanation = questionBlock.querySelector('.explanation');
+        if (explanation) {
+            explanation.style.display = 'block';
+        }
+    }
+</script>
+
+</body>
+</html>
